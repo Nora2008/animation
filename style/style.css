@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(147, 85, 240);
+
+}
+.container__box{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+
+}
+
+.box{
+    height: 240px;
+width: 150px;
+    background: url('../img/WalkingGirl2.png') 0px 0px;
+    animation:play 0.4s steps(4) infinite ,
+step 10s linear infinite ; 
+position: absolute;
+left: 0;
+
+}
+@keyframes play {
+  100%{
+    background-position:-600px ;
+  } 
+  50%{
+    z-index: -1;
+  }
+    
+}
+@keyframes step {
+  100%{
+   left: 100%;
+  } 
+  50%{
+    z-index: -1;
+  }
+    
+}
+.text{
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    line-height: 30px;
+    font-family:'Quicksand' ;
+font-weight: 700;
+animation: text  1.5s infinite linear alternate;
+left: 0;
+position: relative;
+box-shadow: 2px 3px 11px rgba(255,78,90,0);
+}
+@keyframes text {
+    50%{
+      color: rgb(130, 28, 226);
+     
+    }
+    100%{
+transform: translateY(-30px);
+    }
+    0%{
+        transform: translateY(0);
+    }
+}
